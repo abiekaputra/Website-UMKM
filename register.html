@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>UMKMGO! - Login</title>
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="section hero" style="max-height: 60vh !important;">
+            <div class="container-fluid">
+                <div class="row" style="height: 100vh;">
+                    <div class="col position-relative d-flex justify-content-center align-items-center">
+                        <div>
+                            <div class="d-flex flex-column gap-4">
+                                <img src="assets/logo.png" class="login_logo">
+                                <div class="d-flex flex-column gap-2">
+                                    <h3 class="heading-style-h3"> Register to your account </h3>
+                                    <p> Welcome back! Select method to log in : </p>
+                                </div>
+                                <div class="d-flex flex-row gap-7">
+                                    <a class="login_account d-flex gap-2 flex-row px-1 py-1 justify-content-center align-items-center">
+                                        <img src="assets/pngwing 1.png">
+                                        <p> Google </p>
+                                    </a>
+                                    <a class="login_account d-flex gap-2 flex-row px-1 py-1 justify-content-center align-items-center">
+                                        <img src="assets/pesbuk 1.png">
+                                        <p> Facebook </p>
+                                    </a>
+                                </div>
+                                <div class="d-flex flex-row gap-2 justify-content-center align-items-center" style="max-width: 100%;">
+                                    <div class="divider_bottom"></div>
+                                    <p style="font-size:0.72em; width: 100%;" class="text-center"> or continue with email</p>
+                                    <div class="divider_bottom"></div>
+                                </div>
+
+                                <form action="register.php" method="POST">
+                                    <div class="d-flex flex-column gap-3">
+                                        <div class="form_wrapper d-flex flex-row align-items-center px-2 py-1 gap-3">
+                                            <img src="assets/pngwing 2.png" class="form_icon">
+                                            <input type="text" placeholder="Username" id="username" name="username" required class="custom_form">
+                                        </div>
+                                        <div class="form_wrapper d-flex flex-row align-items-center px-2 py-1 gap-3">
+                                            <img src="assets/pngwing 2.png" class="form_icon">
+                                            <input type="email" placeholder="Email" id="email" name="email" required class="custom_form">
+                                        </div>
+                                        <div class="form_wrapper d-flex flex-row align-items-center px-2 py-1 gap-3">
+                                            <img src="assets/pngwing 3.png" class="form_icon">
+                                            <input type="password" placeholder="Password" id="password" name="password" required class="custom_form">
+                                            <img src="assets/pngwing 4.png" class="form_icon">
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <button type="submit" class="btn btn-primary"> Register </button>
+                                        </div>
+                                    </div>
+                                </form>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-flex justify-content-center align-items-center background_color_blue">
+                        <img src="assets/loginimg.png" class="login_img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

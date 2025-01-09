@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>UMKMGO! - Product Upload</title>
+</head>
+<body>
+    <div class="nav-bar d-flex flex-row justify-content-between align-items-center position-fixed px-4 py-4">
+        <div class="logo_wrapper"><a href="index.php"> <img class="logo_wrapper" src="assets/logo.png"></a></div>
+        <div class="d-flex flex-row gap-5 justify-content-center align-items-center">
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="products_page.php">Products</a>
+            <a class="nav-link"  href="creativity_booster.html">Blogs</a>
+            <a class="nav-link"  href="#footer">Contact</a>
+            <a href="login.html"> <button type="button" class="btn btn-primary"> Login</button></a>
+        </div>
+    </div>
+    <div class="page-wrapper">
+        <div class="section">
+            <div class="container px-5 py-5">
+                <div class="d-flex flex-column gap-5">
+                    <h1 class="heading-style-h2 text-center"> Product Upload </h1>
+                    <div class="d-flex flex-column gap-5">
+                        <form method="post" action="product_db.php" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col pt-3">
+                                    <label for="product_name" class="heading-style-h4 pb-2">Product's Name</label>
+                                    <input type="text" class="product_control_input" name="product_name" id="product_name" placeholder="Your Product Name">
+                                </div>
+                                <div class="col pt-3">
+                                    <label for="product_category" class="heading-style-h4 pb-2">Product's Category</label>
+                                    <input type="text" class="product_control_input" name="product_category" id="product_category" placeholder="Your Product Name">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col pt-3">
+                                    <label for="product_price" class="heading-style-h4 pb-2">Product's Price</label>
+                                    <input type="text" class="product_control_input" name="product_price" id="product_price" placeholder="Your Product Name">
+                                </div>
+                                <div class="col pt-3">
+                                    <label for="product_image" class="heading-style-h4 pb-2">Product's Image</label>
+                                    <input type="file" class="product_control_input" name="product_image" id="product_image">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="product_description" class="heading-style-h4 pb-2 pt-3">Product's Description</label>
+                                <input type="text" class="product_control_input" name="product_description" id="product_description">
+                            </div>
+                            <button type="submit" class="btn btn-primary mt-3"> Update! </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
