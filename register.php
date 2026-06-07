@@ -1,35 +1,24 @@
 <?php
-$servername = "localhost";
-$username = "root"; // username default MySQL
-$password = ""; // password default MySQL
-$dbname = "umkm"; // ganti dengan nama database Anda
+require_once 'config.php';
 
-// Buat koneksi ke database
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Periksa koneksi
-if ($conn->connect_error) {
-    die("Koneksi gagal: " . $conn->connect_error);
-}
+$conn = getConnection();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Ambil data dari form
     $username = $_POST['username'];
-    $email = $_POST['email'];
+    $email    = $_POST['email'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    // Buat query untuk menyimpan data
-    $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
+    $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $username, $email, $password);
 
-    if ($conn->query($sql) === TRUE) {
-        echo "Login berhasil, data telah disimpan!";
+    if ($stmt->execute()) {
         header("Location: login.html");
         exit();
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Terjadi kesalahan: " . $stmt->error;
     }
+
+    $stmt->close();
 }
 
-// Tutup koneksi
 $conn->close();
-?>

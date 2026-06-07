@@ -1,18 +1,7 @@
 <?php
+require_once 'config.php';
 
-// Konfigurasi Database
-$servername ="localhost";
-$username = "root";
-$password = "";
-$dbname = "umkm";
-
-//m Koneksi ke Databse
-$conn = new mysqli($servername,$username,$password,$dbname);
-
-//Mengecek Koneksi
-if ($conn->connect_error){
-    die("Koneksi Gagal : " . $conn->connect_error);
-}
+$conn = getConnection();
 
 //Menerima data dari forma
 $product_name = $_POST['product_name'];
