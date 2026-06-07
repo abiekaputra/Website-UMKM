@@ -1,53 +1,53 @@
-# UMKMGO! — Website E-Commerce UMKM
+# UMKMGO! — Small Business E-Commerce Website
 
-Website e-commerce sederhana untuk UMKM dengan fitur katalog produk, keranjang belanja, autentikasi pengguna, dan manajemen transaksi. Dibangun menggunakan PHP native dan MySQL.
+A PHP-native e-commerce website for small businesses (UMKM) featuring a product catalog, shopping cart, user authentication, and transaction management.
 
-## Fitur
+## Features
 
-- **Katalog Produk** — tampil produk dengan gambar, kategori, harga, dan deskripsi
-- **Detail Produk** — halaman per produk dengan informasi lengkap
-- **Keranjang Belanja** — tambah/hapus produk, ringkasan belanja
-- **Transaksi** — proses pembelian, detail transaksi, dan struk (receipt)
-- **Autentikasi** — registrasi, login, logout berbasis session
-- **Upload Produk** — admin dapat mengunggah produk beserta foto
-- **Profil Pengguna** — halaman akun user
+- **Product Catalog** — browse products with images, categories, prices, and descriptions
+- **Product Detail** — dedicated page per product with full information
+- **Shopping Cart** — add/remove items, order summary
+- **Transactions** — purchase flow, transaction details, and receipt
+- **Authentication** — session-based registration, login, and logout
+- **Product Upload** — admin can upload products with photos
+- **User Profile** — account management page
 
 ## Tech Stack
 
-- PHP (native, tanpa framework)
+- PHP (native, no framework)
 - MySQL
 - HTML / CSS / JavaScript
 
-## Instalasi
+## Installation
 
-### Prasyarat
+### Prerequisites
 
 - PHP >= 7.4
 - MySQL
-- Web server (XAMPP, Laragon, atau `php -S`)
+- Web server (XAMPP, Laragon, or built-in `php -S`)
 
-### Langkah-langkah
+### Steps
 
 ```bash
-# 1. Clone repo
+# 1. Clone the repository
 git clone https://github.com/abiekaputra/Website-UMKM.git
 cd Website-UMKM
 
-# 2. Buat database dan tabel
+# 2. Create database and tables
 mysql -u root -p < schema.sql
 
-# 3. Sesuaikan konfigurasi database
-#    Edit config.php — ubah DB_HOST, DB_USER, DB_PASS, DB_NAME sesuai environment lokal
+# 3. Configure database connection
+#    Edit config.php — set DB_HOST, DB_USER, DB_PASS, DB_NAME to match your local environment
 
-# 4. Jalankan server
+# 4. Start the development server
 php -S localhost:8000
 ```
 
-Buka `http://localhost:8000` di browser.
+Open `http://localhost:8000` in your browser.
 
-## Konfigurasi
+## Configuration
 
-Semua konfigurasi database terpusat di `config.php`:
+All database settings are centralized in `config.php`:
 
 ```php
 define('DB_HOST', 'localhost');
@@ -56,27 +56,27 @@ define('DB_PASS', '');
 define('DB_NAME', 'umkm');
 ```
 
-## Struktur File
+## Project Structure
 
 ```
-├── config.php              # Konfigurasi & koneksi database
-├── schema.sql              # Skema database (jalankan sekali saat setup)
-├── index.php               # Halaman utama
-├── products_page.php       # Katalog produk
-├── productDetail.php       # Detail produk
-├── product_db.php          # Handler upload produk
-├── cart.php                # Keranjang belanja
-├── addCart.php             # Aksi tambah ke keranjang
-├── transactionDetail.php   # Detail transaksi
-├── receipt.php             # Struk pembelian
-├── prosesLogin.php         # Handler login
-├── register.php            # Handler registrasi
-├── logout.php              # Handler logout
-├── assets/                 # Gambar dan font
-├── style/                  # CSS
-└── upload_images/          # Folder hasil upload produk
+├── config.php              # Database configuration & connection helper
+├── schema.sql              # Database schema (run once on setup)
+├── index.php               # Homepage
+├── products_page.php       # Product catalog
+├── productDetail.php       # Product detail page
+├── product_db.php          # Product upload handler
+├── cart.php                # Shopping cart
+├── addCart.php             # Add-to-cart action handler
+├── transactionDetail.php   # Transaction details
+├── receipt.php             # Purchase receipt
+├── prosesLogin.php         # Login handler
+├── register.php            # Registration handler
+├── logout.php              # Logout handler
+├── assets/                 # Images and fonts
+├── style/                  # CSS files
+└── upload_images/          # Product image uploads
 ```
 
-## Lisensi
+## License
 
-Proyek ini dibuat untuk keperluan akademis dan pengembangan portofolio.
+Built for academic purposes and portfolio development.
